@@ -9,6 +9,7 @@
 主要的技术栈：qt、sdl2、ffmpeg、opengl、qss。
 
 参考项目连接：【Qt+FFMPEG+SDL实现视频播放器(VERSION 1.0)】 https://www.bilibili.com/video/BV1A94y1h7oq/?share_source=copy_web&vd_source=3b7481dbfe4e34048fe31f044289d873
+
 本项目演示连接：【基于ffmpeg+qt+sdl2实现的网络视频播放器（新手向）】 https://www.bilibili.com/video/BV1np421y72W/?share_source=copy_web&vd_source=3b7481dbfe4e34048fe31f044289d873
 
 如果感觉代码可以，希望你留个star，这个对我挺重要的。
