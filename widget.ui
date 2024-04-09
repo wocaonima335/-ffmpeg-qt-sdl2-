@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Widget</class>
+ <widget class="QWidget" name="Widget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>834</width>
+    <height>651</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>PlayVideo</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="image.qrc">
+    <normaloff>:/image-hover/PlayApp.png</normaloff>:/image-hover/PlayApp.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget
+{
+	
+	border:none;
+}</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <item row="0" column="0">
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string/>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="OpenGLWidget" name="opengl_widget" native="true">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="contextMenuPolicy">
+         <enum>Qt::DefaultContextMenu</enum>
+        </property>
+        <property name="statusTip">
+         <string/>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QWidget{background:transparent;}</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="AVPtsSlider" name="PtsSlider">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QSlider::groove:horizontal#PtsSlider{
+           height: 6px;
+           left: 0px;
+           right: 0px;
+           border: 0px;
+           border-radius: 30px;
+           background: rgba(255, 255, 255, 50);
+           }
+ QSlider::handle:horizontal#PtsSlider{
+           width: 10px;
+           height: 10px;
+           margin-top: -3px;
+           margin-left: 0px;
+           margin-bottom: -3px;
+           margin-right: 0px;
+           border-image: url(:/image-hover/sliderHandle.png);
+           }
+
+           QSlider::sub-page:horizontal#PtsSlider{
+           background: rgba(255, 255, 255, 1)
+           }</string>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QGroupBox" name="groupBox_2">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="title">
+      <string/>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_7">
+      <item>
+       <widget class="QComboBox" name="UrlcomboBox">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+          <horstretch>5</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>200</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>400</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QComboBox::down-arrow
+{
+	image: url(:/image-hover/add.png);
+
+}
+QComboBox::drop-down
+{
+	ubcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 22px;
+    border-left-width: 1px;
+    border-left-color: rgba(255,255,255,1);
+    border-left-style: solid; /* 设置下拉按钮的样式 */
+}
+QComboBox {
+  background-color:gray ; /* 设置QComboBox的背景颜色 */
+    border:1px solid rgba(255,255,255,1) ; /* 设置QComboBox的边框样式 */
+    border-radius: 2px; /* 设置QComboBox的边框圆角 */
+}</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>10</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QComboBox" name="SpeedcomboBox">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QComboBox{
+color: rgb(255, 255, 255);
+border:0px;
+padding-left:5px; 
+background-color:rgba(0, 0, 0, 0);
+}
+ 
+QComboBox QAbstractItemView::item { 
+font-size:13pt;
+border-radius:0px; 
+color: rgb(255,255,255);
+background-color:rgb(20, 20, 20);
+height:25px;
+padding-left:15px;
+}
+QComboBox QAbstractItemView::item:selected { 
+color: rgb(242, 211, 34);
+}
+QComboBox QAbstractItemView {
+    outline: 0px;
+    border: 0px;
+}
+ 
+QComboBox::drop-down {
+border:0px;
+}</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <property name="sizeConstraint">
+         <enum>QLayout::SetMinimumSize</enum>
+        </property>
+        <item>
+         <widget class="QPushButton" name="PrepushButton">
+          <property name="styleSheet">
+           <string notr="true">QPushButton
+{
+background-image: url(:/image-hover/pre.png);
+background-repeat:no-repeat;
+background-position:center center;
+border:none;
+icon-size:30px;
+  min-width: 24px;
+    min-height: 24px;
+}
+QPushButton:hover
+{
+background-image: url(:/image-hover/pre-hover.png);
+background-repeat:no-repeat;
+background-position:center center;
+}
+
+
+
+</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_5">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Expanding</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="PlaypushButton">
+          <property name="styleSheet">
+           <string notr="true">QPushButton
+{
+background-image: url(:/image-hover/pase.png);
+background-repeat:no-repeat;
+background-position:center center;
+border:none;
+icon-size:24px;
+  min-width: 24px;
+    min-height: 24px;
+}
+QPushButton:hover{
+background-image: url(:/image-hover/pase-hover.png);
+background-repeat:no-repeat;
+background-position:center center;
+}
+
+
+
+
+</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_11">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Expanding</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="NextpushButton">
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton
+{
+background-image: url(:/image-hover/next.png);
+background-repeat:no-repeat;
+background-position:center center;
+border:none;
+background-size:30px;
+icon-size:24px;
+min-width: 24px;
+ min-height: 24px;
+}
+QPushButton:hover
+{
+background-image: url(:/image-hover/next-hover.png);
+background-repeat:no-repeat;
+background-position:center center;
+}
+
+
+
+
+</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_6">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>30</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="RePlaypushButton">
+        <property name="styleSheet">
+         <string notr="true">QPushButton
+{
+background-image: url(:/image-hover/loop-hover.png);
+background-repeat:no-repeat;
+background-position:center center;
+border:none;
+background-size:20px;
+icon-size:14px;
+min-width: 20px;
+ min-height: 20px;
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QLabel" name="Ptslabel">
+          <property name="styleSheet">
+           <string notr="true">QLabel {
+    color: white;
+}
+</string>
+          </property>
+          <property name="text">
+           <string>00.00</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="Linelabel">
+          <property name="styleSheet">
+           <string notr="true">QLabel {
+    color: white;
+}
+</string>
+          </property>
+          <property name="text">
+           <string>/</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="Durlabel">
+          <property name="styleSheet">
+           <string notr="true">QLabel {
+    color: white;
+}
+</string>
+          </property>
+          <property name="text">
+           <string>00.00</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <widget class="QPushButton" name="VolumepushButton_2">
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton
+{
+	background-image: url(:/image-hover/music-voice.png);
+	background-repeat:no-repeat;
+	background-position:center center;
+	border:none;
+}
+QPushButton:hover
+{
+		background-image: url(:/image-hover/music-voice-hover.png);
+	background-repeat:no-repeat;
+	background-position:center center;
+	border:none;
+}</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSlider" name="VolumeSlider">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QSlider::groove:horizontal
+{
+	height:6px;
+	left:0px;
+	right:0px;
+	border:10px;
+	border-radius:10px;
+	background:rgba(255,255,255,50)
+} 
+QSlider::handle:horizontal
+{
+	width:10px;
+	height:10px;
+	margin-top:-3px;
+	margin-left:5px;
+	margin-bottom:-3px;
+	margin-right:5px;
+	border-image:url(:/image-hover/sliderHandle.png)
+}
+QSlider::sub-page:horizontal
+{
+	background:rgba(255,255,255,1)
+}</string>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>OpenGLWidget</class>
+   <extends>QWidget</extends>
+   <header>opengl_widget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>AVPtsSlider</class>
+   <extends>QSlider</extends>
+   <header location="global">slider_pts.h</header>
+   <slots>
+    <slot>ptsSliderPressedSlot()</slot>
+   </slots>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="image.qrc"/>
+ </resources>
+ <connections/>
+</ui>
