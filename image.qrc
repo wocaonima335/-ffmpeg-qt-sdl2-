@@ -1,0 +1,22 @@
+<RCC>
+    <qresource prefix="/">
+        <file>image-hover/add-hover.png</file>
+        <file>image-hover/loop-hover.png</file>
+        <file>image-hover/loop-one-hover.png</file>
+        <file>image-hover/music-voice-hover.png</file>
+        <file>image-hover/next-hover.png</file>
+        <file>image-hover/pase-hover.png</file>
+        <file>image-hover/play-hover.png</file>
+        <file>image-hover/play-random-hover.png</file>
+        <file>image-hover/pre-hover.png</file>
+        <file>image-hover/pase.png</file>
+        <file>image-hover/play.png</file>
+        <file>image-hover/next.png</file>
+        <file>image-hover/pre.png</file>
+        <file>image-hover/music-voice.png</file>
+        <file>image-hover/add.png</file>
+        <file>image-hover/sliderHandle.png</file>
+        <file>image-hover/arrow.png</file>
+        <file>image-hover/PlayApp.png</file>
+    </qresource>
+</RCC>
